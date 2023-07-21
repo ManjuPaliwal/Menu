@@ -1,0 +1,393 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(168, 168, 212);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.container {
+  position: relative;
+  width: 1366px;
+  height: auto;
+}
+
+header,
+ul {
+  display: flex;
+  align-items: center;
+  padding-left: 2.5em;
+}
+
+.removehead {
+  display: none;
+}
+
+nav {
+  width: 100%;
+}
+
+ul {
+  justify-content: space-around;
+
+}
+
+ul li {
+  text-align: center;
+  position: relative;
+  list-style: none;
+  font-size: large;
+  font-weight: bold;
+  font-family: monospace;
+  cursor: pointer;
+text-shadow: 1px 3px 2px rgba(0, 0, 0, 0.3);  
+
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  top: 1.1em;
+  left: 0;
+  border-bottom: 2px dotted rgb(207, 3, 3);
+  transition: width 0.5s ease-in-out;
+}
+
+ul li:hover::before {
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: #4c699e;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-text {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: #fff;
+  /* color: rgb(255, 255, 255); */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.logo::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 80%;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.1;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.logo::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: #317196;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+section {
+  position: relative;
+  display: flex;
+  margin-top: 3.5em;
+}
+
+.heading {
+  padding-left: 5em;
+}
+
+.heading p .marker {
+  font-size: x-large;
+  color: red;
+}
+
+.place {
+  color: gray;
+  font-weight: bold;
+  padding-left: .5em;
+}
+
+.yummy {
+  font-size: 2.5em;
+  line-height: 1.5em;
+text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);  
+
+}
+
+.search {
+  background-color: #fff;
+  width: 400px;
+  display: flex;
+  border-radius: 2em;
+  align-items: center;
+  margin-top: 1.5em;
+  margin-bottom: 3.5em;
+  box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+.search input {
+  width: 300px;
+  height: 50px;
+  padding: 0 1em;
+  margin-left: 1em;
+  border: none;
+  font-weight: bold;
+  background-color: transparent;
+  outline: none;
+}
+
+.search-btn {
+  width: 70px;
+  height: 40px;
+  color: #fff;
+  font-size: large;
+  font-weight: bold;
+  border: none;
+  border-radius: 2em;
+  background-color: red;
+  cursor: pointer;
+  text-transform: capitalize;
+  letter-spacing: -5px;
+
+}
+.displayFood{
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 10%;
+  justify-content: center;
+  align-items: center;
+  color: #1c335e;
+  font-weight: bold;
+line-height: 2.5em;
+}
+.displayPrice{
+  font-size: x-large;
+}
+.displayTitle{
+  font-size: xx-large;
+}
+
+.displayImg{
+  width: 350px;
+  border-radius: 50%;
+  box-shadow: 5px 0px 10px 5px rgba(0, 0, 0, 0.3);
+
+}
+.scrollImgDiv {
+  position: relative;
+  display: flex;
+  margin-left: -5em;
+}
+
+.scrollImg {
+  width: 200px;
+  height: 250px;
+  margin-right: 2em;
+  mix-blend-mode: multiply;
+  box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+  position: absolute;
+  bottom: 10%;
+  width: 200px;
+  padding: 8px;
+  background-color: black;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: red;
+}
+
+.nextbtn {
+  position: absolute;
+  z-index: 3;
+  top: 30%;
+  right: 7%;
+  width: 5em;
+  height: 5em;
+  background-color: black;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: red;
+  border-radius: 10em 5em 20em 4em;
+  cursor: pointer;
+  border: none;
+  box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+
+}
+
+.banner {
+  margin-left: 3em;
+  mix-blend-mode: multiply;
+}
+
+.foodfind{
+  /* width: 550px; */
+  position:absolute;
+  /* z-index: 5; */
+  top: 0;
+  left: 24%;
+  display: flex;
+  background-color: #fff;
+  box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+.bgdiv{
+  width: 150px;
+  height: auto;
+background-color:#4c699e;
+margin-right: 3em;
+display: flex;
+justify-content: center;
+align-items: flex-end;
+padding-bottom: 7em;}
+.menu{
+  color: white;
+  rotate: 270deg;
+  font-size:100px;
+  font-weight: bold;
+  letter-spacing: 4px;
+
+}
+
+.bgdiv .img1{
+  width: 180px;
+position: absolute;
+top: 0%;
+left: 2%;
+border-radius: 50%;
+border: 2px dotted #4c699e;
+}
+.bgdiv .img2{
+  width: 100px;
+  top: 30%;
+  position: absolute;
+  border-radius: 50%;
+  mix-blend-mode: multiply;
+}
+
+.itemdiv{
+  display: flex;
+  justify-content: space-between;
+  font-size: smaller;
+  font-weight: bolder;
+  line-height: 1.73em;
+
+}
+.itemheading{
+  background-color: black;
+  color: red;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.3);
+}
+.number,.weblink,.hotelname{
+font-weight: bold;
+color: #4c699e;
+padding-bottom: 5px;
+}
+.hotelname{
+text-shadow: 1px 3px 2px rgba(0, 0, 0, 0.3);  
+}
+.itemName,.itemPrice{
+width: 200px;
+text-align: justify;
+color:#4c699e;
+}
+
+.foodDrinkDiv {
+  width: 100%;
+  position: absolute;
+  /* z-index: 5; */
+  top: 0%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* background-color: #4c699e6c; */
+}
+
+
+.blur {
+  filter: blur(50px);
+}
+
+.foodDrink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em;
+  box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+.aboutfood {
+  margin-left: 2em;
+  font-weight: bold;
+  line-height: 1.5em;
+}
+
+.foodDrinkImg {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.3);
+  /* mix-blend-mode: multiply; */
+}
+
+.foodDrinkTitle,
+.foodDrinkPrice {
+  background-color: black;
+  color: red;
+  padding: .3em;
+  padding-left: 2em;
+  box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1em;
+  border-bottom-left-radius: 1em;
+  border-top-left-radius: 1em;
+}
+
+.closebtn {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  right: 1em;
+  font-size: xx-large;
+  color: red;
+  background-color: transparent;
+  border: none;
+  text-shadow: 1px 3px 2px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+
+}
