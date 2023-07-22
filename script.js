@@ -290,7 +290,6 @@ foodFind.addEventListener('click', function () {
 
         }
 
-        sectionheaderStyle();
         closebtn.addEventListener('click', function () {
             const foodfind = document.querySelector('.foodfind');
             const drinkMenu = document.querySelector('.drinkMenu');

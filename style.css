@@ -262,9 +262,9 @@ line-height: 2.5em;
 
 .foodfind{
   position:absolute;
-  /* z-index: 5; */
-  top: 0;
-  left: 24%;
+  z-index: 999;
+  top: 0%;
+  /* left: 24%; */
   display: flex;
   justify-content: center;
   background-color: #fff;
@@ -516,12 +516,10 @@ height: 200px;
 .foodfind{
   width: 350px;
   position:absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-45%,-30%);
+  
 }
 .foodfind .closebtn{
-  top: -1em;
+  top: 0;
   right: .7em;
 }
 .bgdiv{
@@ -601,6 +599,16 @@ margin: 0;
   }
   .nextbtn{
     right: 0;
+  }
+  .foodDrink{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .foodDrinkImg{
+    width:200px ;
+    height: 200px;
   }
 }
 
