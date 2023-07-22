@@ -10,13 +10,14 @@ body {
   justify-content: center;
   background-color: rgb(168, 168, 212);
   font-family: Georgia, 'Times New Roman', Times, serif;
-
+/* overflow-x: hidden; */
 }
 
 .container {
   position: relative;
-  width: 1366px;
-  height: auto;
+  max-width: 1366px;
+  width: 100%;
+height: 100vh; 
 }
 
 header,
@@ -25,7 +26,9 @@ ul {
   align-items: center;
   padding-left: 2.5em;
 }
-
+.close ,.bars{
+  display: none;
+}
 .removehead {
   display: none;
 }
@@ -118,8 +121,10 @@ ul li:hover::before {
 }
 
 section {
+  width: 100%;
   position: relative;
   display: flex;
+  justify-content: center;
   margin-top: 3.5em;
 }
 
@@ -210,7 +215,7 @@ line-height: 2.5em;
 .scrollImgDiv {
   position: relative;
   display: flex;
-  margin-left: -5em;
+  margin-left: -6em;
 }
 
 .scrollImg {
@@ -236,7 +241,7 @@ line-height: 2.5em;
   position: absolute;
   z-index: 3;
   top: 30%;
-  right: 7%;
+  right: 10%;
   width: 5em;
   height: 5em;
   background-color: black;
@@ -256,12 +261,12 @@ line-height: 2.5em;
 }
 
 .foodfind{
-  /* width: 550px; */
   position:absolute;
   /* z-index: 5; */
   top: 0;
   left: 24%;
   display: flex;
+  justify-content: center;
   background-color: #fff;
   box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.3);
 }
@@ -390,4 +395,219 @@ color:#4c699e;
   text-shadow: 1px 3px 2px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 
+}
+
+
+/* For smaller screens */
+@media only screen and (max-width: 768px) {
+
+ .header{
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 2px 2px 8px 0px gray;
+border-radius: 8px;
+ }
+.bars{
+  display: block;
+        color: black;
+        font-size: 25px;
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
+  cursor: pointer;
+  margin-right: 1em;
+  text-shadow: 2px 2px 8px gray;
+
+}
+nav{
+  position: absolute;
+  top: 1%;
+  left: 0;
+}
+  ul {
+    width: 100%;
+    display:none;
+    position: absolute;
+    right: 0;
+    background-color: whitesmoke;
+    z-index: 999;
+    box-shadow: 2px 2px 8px 0px gray;
+    border-radius: 1em;
+    line-height: 2em; /* Change to block for better mobile layout */
+  }
+  ul li:hover::before {
+    width:0;
+  }
+  .close {
+    position: absolute;
+    z-index: 999;
+    display: block;
+    color: black;
+    font-size: 30px;
+    /* position: relative; */
+    right: .5em;
+    text-shadow: 2px 2px 8px 0px gray;
+    border: none;
+    cursor: pointer;
+
+}
+.displaytoggle {
+  display: block;
+}
+section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 3.5em;
+}
+
+.heading {
+  width: 100%;
+  padding-left: 3em;
+}
+
+.heading p .marker {
+  width: 100%;
+  font-size: x-large;
+  color: red;
+}
+
+
+.yummy {
+  font-size: 1.3em;
+}
+
+.search {
+  width: 300px;
+}
+
+.search input {
+  width: 200px;
+  height: 50px;
+  
+}
+.displayFood{
+  width: 300px;
+}
+.displayImg{
+  width: 200px;
+}
+.displayTitle,.dislayDescription{
+  text-align: center;
+  width: 100%;
+}
+.scrollImgDiv {
+  display: none;
+}
+.banner img{
+  width: 200px;
+}
+.banner {
+  width: 200px;
+height: 200px;
+  margin-top: 0em;
+  margin-left: -7em;
+}
+.closebtn{
+  top: -1em;
+  right: -.5em;
+}
+
+.foodfind{
+  width: 350px;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-45%,-30%);
+}
+.foodfind .closebtn{
+  top: -1em;
+  right: .7em;
+}
+.bgdiv{
+  width: 70px;
+margin-right: 2em;
+}
+.menu{
+  font-size:50px;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+.bgdiv .img1{
+  width: 100px;
+}
+.bgdiv .img2{
+  width: 50px;
+  top: 22%;
+}
+.itemheading{
+  width: 100px;
+}
+.itemdiv{
+  font-size: 10px;
+  letter-spacing: -1px;
+}
+.number,.weblink,.hotelname{
+  font-size: medium;
+}
+
+.itemName,.itemPrice{
+width: 150px;
+text-align: justify;
+}
+.foodDrinkDiv {
+  width: 100%;
+  font-size: small;
+  grid-template-columns: 1fr;
+}
+.foodDrink{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.foodDrinkImg{
+  width: 150px;
+  height: 150px;
+}
+.foodDrink  .closebtn{
+  top: 0em;
+  right: 1em;
+}
+
+  .removehead {
+    display: block; 
+  }
+
+  .container {
+    padding: 10px; 
+  }
+
+}
+
+/* For tablets and medium-sized screens */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .scrollImgDiv {
+   position: absolute;
+   left: 0%;
+margin: 0;
+  }
+  .banner{
+    width: 300px;
+    margin-left: 0;
+  }
+  .banner img{
+    width: 300px;
+  }
+  .nextbtn{
+    right: 0;
+  }
+}
+
+/* For larger screens */
+@media only screen and (min-width: 1025px) {
+  .nextbtn{
+    right: 10%;
+  }
+ 
 }

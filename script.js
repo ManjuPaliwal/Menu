@@ -347,7 +347,8 @@ searchBtn.addEventListener('click', function () {
         displayFood.style.display = 'flex'
         const p = document.createElement('p');
         p.innerText = '"We apologize, but the requested food item is currently unavailable. Please take a moment to check our food find menu for alternative options that may pique your intrest..!"';
-        p.style.width='650px'
+        p.style.width='100%'
+        p.style.fontSize='small'
         p.classList.add('displayTitle');
         displayFood.appendChild(p);
         displayFood.appendChild(closebtn);
@@ -372,3 +373,18 @@ const sectionheaderStyle = () => {
     });
 }
 
+
+
+
+/// for small screen
+
+let bars = document.querySelector('.bars');
+let ul = document.querySelector('.ul');
+let close = document.querySelector('.close')
+bars.addEventListener('click',function(){
+ul.classList.toggle('displaytoggle')
+});
+close.addEventListener('click',function(){
+ul.classList.toggle('displaytoggle')
+
+})
