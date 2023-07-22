@@ -10,7 +10,7 @@ body {
   justify-content: center;
   background-color: rgb(168, 168, 212);
   font-family: Georgia, 'Times New Roman', Times, serif;
-/* overflow-x: hidden; */
+overflow-x: hidden;
 }
 
 .container {
@@ -69,7 +69,10 @@ ul li::before {
 ul li:hover::before {
   width: 100%;
 }
-
+a{
+  text-decoration: none;
+  color: black;
+}
 .logo {
   display: flex;
   align-items: center;
@@ -396,8 +399,69 @@ color:#4c699e;
   cursor: pointer;
 
 }
+#service{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 3em;
+}
+.serviceimg{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color:#2f4877;
 
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.serviceNumber{
+  font-size: large;
+}
+.serviceimg h2{
+font-size: xx-large;
+}
+.serviceList{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
 
+.chefimg{
+  width: 300px;
+  mix-blend-mode: multiply;
+}
+.servicediv{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  grid-gap: 1em;
+}
+.imgicons{
+  width: 90px;
+  mix-blend-mode: multiply;
+}
+.serviceHeading{
+color: rgb(117, 11, 11);
+}
+.servicepara{
+  font-weight: bold;
+}
+.box{
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  line-height: 2em;
+  border: 1px solid white;
+  border-radius: 2em;
+  outline: 2px solid black;
+  padding: 1em;
+}
+.box p{
+  font-size: small;
+}
 /* For smaller screens */
 @media only screen and (max-width: 768px) {
 
@@ -580,8 +644,21 @@ text-align: justify;
   .container {
     padding: 10px; 
   }
+.serviceimg{
+ flex-direction: column;
+ text-align: center;
+ line-height: 1.5em;
+ text-transform: none;
+}
+.serviceimg div{
+  font-size: small;
+}
+.servicediv{
+  grid-template-columns: 1fr ;
 
 }
+}
+
 
 /* For tablets and medium-sized screens */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -610,6 +687,7 @@ margin: 0;
     width:200px ;
     height: 200px;
   }
+ 
 }
 
 /* For larger screens */
