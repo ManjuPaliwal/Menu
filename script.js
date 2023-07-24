@@ -234,11 +234,12 @@ values.forEach((value) => {
                 aboutfood.appendChild(price);
                 aboutfood.appendChild(description);
                 div.appendChild(closebtn);
-
-
-                sectionheaderStyle();
+const service = document.querySelector('#service');
+service.style.display='none'
+                blur();
                 closebtn.addEventListener('click', function () {
                     foodDrinkDiv.innerHTML = '';
+                    service.style.display='flex'
                 });
             }
 
@@ -314,7 +315,7 @@ searchBtn.addEventListener('click', function () {
     menu.forEach((item) => {
         const items = item.title.toLowerCase();
         if (items == inputValue) {
-            displayFood.style.display = 'flex'
+            displayFood.style.display = 'flex';
             const img = document.createElement('img');
             img.src = item.image;
             img.classList.add('displayImg');
@@ -338,7 +339,7 @@ searchBtn.addEventListener('click', function () {
             displayFood.appendChild(description);
             displayFood.appendChild(closebtn);
 
-            sectionheaderStyle();
+            blur();
             found = true
         }
     });
@@ -351,13 +352,13 @@ searchBtn.addEventListener('click', function () {
         p.classList.add('displayTitle');
         displayFood.appendChild(p);
         displayFood.appendChild(closebtn);
-        sectionheaderStyle();
+        blur();
 
     }
 })
 
 
-const sectionheaderStyle = () => {
+const blur = () => {
     const section = document.querySelector('.section');
     section.classList.add('blur');
 
