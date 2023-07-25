@@ -90,7 +90,6 @@ a{
   font-size: 0.9rem;
   text-transform: uppercase;
   color: #fff;
-  /* color: rgb(255, 255, 255); */
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
@@ -433,6 +432,9 @@ font-size: xx-large;
   grid-template-columns: 1fr 1fr 1fr;
   place-items: center;
   grid-gap: 1em;
+  padding: 1em;
+  box-shadow: 1px 3px 2px 3px rgba(0, 0, 0, 0.3);
+
 }
 .imgicons{
   width: 90px;
@@ -457,6 +459,30 @@ color: rgb(117, 11, 11);
 }
 .box p{
   font-size: small;
+}
+#contact{
+  max-width: 900px;
+  width: 100%;
+  color: #1c335e;
+  text-align: center;
+  margin-top: 2em;
+  line-height: 2em;
+}
+#contact h1,.email span{
+  color: rgb(97, 12, 12);
+}
+#contact p{
+  font-weight: bold;
+}
+.email{
+ display: grid;
+ grid-template-columns:1fr 1fr;
+}
+.copyright{
+  color: black;
+}
+.copyright span{
+  color: #1c335e;
 }
 /* For smaller screens */
 @media only screen and (max-width: 768px) {
@@ -493,7 +519,7 @@ nav{
     z-index: 999;
     box-shadow: 2px 2px 8px 0px gray;
     border-radius: 1em;
-    line-height: 2em; /* Change to block for better mobile layout */
+    line-height: 2em; 
   }
   ul li:hover::before {
     width:0;
@@ -652,6 +678,9 @@ text-align: justify;
 .servicediv{
   grid-template-columns: 1fr ;
 
+}
+.email{
+  grid-template-columns: auto;
 }
 }
 
